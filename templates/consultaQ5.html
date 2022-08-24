@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Disciplinas com reprovação: <small> {{session.username}}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Disciplinas:</th>
+    </tr>
+    {% for disciplina in disciplinas %}
+      <tr>
+        <td>{{disciplina.NomeDisciplina}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

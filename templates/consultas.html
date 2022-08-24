@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Opções</h1>
+  <ul class="list-group">
+    <li class="list-group-item"><a href="consultas/consultaQ1"> Q1: Alunos com notas maiores ou iguais a 8.5?</a></li>
+    <li class="list-group-item"><a href="consultas/consultaQ2"> Q2: Quais empresas possuem turmas?</a></li>
+    <li class="list-group-item"><a href="consultas/consultaQ3"> Q3: Quais disciplinas cada professor já lecionou?</a></li>
+    <li class="list-group-item"><a><form name="input" action="/consultaQ4" method="get" >Q4: Alunos vinculados a empresa: <input type="text" name="empresa" value="Nome da empresa"><input type="submit" value="Consultar"></form></a></li>
+    <li class="list-group-item"><a href="consultas/consultaQ5"> Q5: Quais são as matérias que apresentam pelo menos uma reprovação?</a></li>
+    <li class="list-group-item"><a><form name="input" action="/consultaQ6" method="get" >Q6:  Qual o custo gasto com formações da empresa: <input type="text" name="empresa" value="Nome da empresa"><input type="submit" value="Consultar"></form></a></li>
+    <li class="list-group-item"><a href="consultas/consultaQ7"> Q7: Quais os processos seletivos já realizados?</a></li>
+  </ul>
+{% endblock %}

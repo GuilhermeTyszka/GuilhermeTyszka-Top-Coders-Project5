@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Empresas Parceiras <small> {{session.username}}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th>
+      <th>Empresa</th>
+      <th>CNPJ</th>
+      <th>Endereço</th>
+      <th>Área de Atuação</th>
+    </tr>
+    {% for empresa in empresas %}
+      <tr>
+        <td>{{empresa.idEmpresa}}</td>
+        <td>{{empresa.NomeEmpresa}}</td>
+        <td>{{empresa.CNPJ}}</td>
+        <td>{{empresa.Endereco}}</td>
+        <td>{{empresa.AreaAtuacao}}</td>     
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

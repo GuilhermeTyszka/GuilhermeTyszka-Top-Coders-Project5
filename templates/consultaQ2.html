@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Empresas que possuem turmas: <small> {{session.username}}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Empresa:</th>
+      <th>Quantidade de turmas:</th>
+    </tr>
+    {% for empresa in empresas %}
+      <tr>
+        <td>{{empresa.Empresa}}</td>
+        <td>{{empresa.Qtde_Turmas}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

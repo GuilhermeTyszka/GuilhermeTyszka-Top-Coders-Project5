@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Alunos da empresa {% print(name.title()) %}: <small> {{session.username}}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Alunos:</th>
+    </tr>
+    {% for empresa in empresas %}
+      <tr>
+        <td>{{empresa.Nome}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

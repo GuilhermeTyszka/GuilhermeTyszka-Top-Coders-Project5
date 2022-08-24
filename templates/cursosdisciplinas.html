@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Cursos e Disciplinas <small> {{session.username}}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Cursos</th>
+      <th>Disciplina</th>
+      <th>Carga Horária</th>
+    </tr>
+    {% for curso in cursos %}
+      <tr>
+        <td>{{curso.NomeCurso}}</td>
+        <td>{{curso.NomeDisciplina}}</td>
+        <td>{{curso.CargaHoraria}}</td>  
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

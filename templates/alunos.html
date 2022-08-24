@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Alunos <small> {{session.username}}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th>
+      <th>Aluno</th>
+      <th>Email</th>
+      <th>Documento</th>
+      <th>DataNascimento</th>
+      <th>Telefone</th>
+      <th>Endereco</th>
+      <th>Cidade</th>
+    </tr>
+    {% for aluno in alunos %}
+      <tr>
+        <td>{{aluno.idAluno}}</td>
+        <td>{{aluno.Nome}}</td>
+        <td>{{aluno.Email}}</td>
+        <td>{{aluno.NumDocumento}}</td>
+        <td>{{aluno.DataNascimento}}</td>
+        <td>{{aluno.Telefone}}</td>
+        <td>{{aluno.Endereco}}</td>
+        <td>{{aluno.Cidade}}</td>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

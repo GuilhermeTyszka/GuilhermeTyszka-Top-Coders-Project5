@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Professores: <small> {{session.username}}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Professor:</th>
+      <th>Disciplina:</th>
+      <th>Como:</th>
+    </tr>
+    {% for professor in professores %}
+      <tr>
+        <td>{{professor.Nome}}</td>
+        <td>{{professor.NomeDisciplina}}</td>
+        <td>{{professor.Tipo}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
+

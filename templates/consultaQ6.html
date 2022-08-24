@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Custo total de formação da empresa {% print(name.title()) %}: <small> {{session.username}}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Custo total:</th>
+    </tr>
+    {% for empresa in empresas %}
+      <tr>
+        <td>{{empresa.CustoFormacao}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

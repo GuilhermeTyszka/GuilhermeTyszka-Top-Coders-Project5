@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Alunos com notas maiores que 8.5: <small> {{session.username}}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>ID Matrícula</th>
+      <th>Aluno</th>
+      <th>Nome</th>
+    </tr>
+    {% for aluno in alunos %}
+      <tr>
+        <td>{{aluno.idMatricula}}</td>
+        <td>{{aluno.Nome}}</td>
+        <td>{{aluno.Nota}}</td>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

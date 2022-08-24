@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Processos Seletivos <small> {{session.username}}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Empresa:</th>
+      <th>Data:</th>
+      <th>Processo Seletivo:</th>
+    </tr>
+    {% for empresa in empresas %}
+      <tr>
+        <td>{{empresa.Empresa}}</td>
+        <td>{{empresa.DataInicio}}</td>
+        <td>{{empresa.NomeProcessoSeletivo}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
